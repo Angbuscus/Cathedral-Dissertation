@@ -872,6 +872,18 @@ MonoBehaviour:
           m_StringArgument: ToggleCameraScript.ToggleVisibility
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 985741839}
+        m_TargetAssemblyTypeName: ToggleCameraScript, Assembly-CSharp
+        m_MethodName: ToggleColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &704383206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1215,6 +1227,7 @@ MonoBehaviour:
   UIMiniMap: {fileID: 856028063}
   LiveFloorPlan: {fileID: 491897099}
   UserModel: {fileID: 0}
+  toggledColor: {r: 0.14509805, g: 0.10196079, b: 0.15294118, a: 0}
 --- !u!1 &1116349894
 GameObject:
   m_ObjectHideFlags: 0
