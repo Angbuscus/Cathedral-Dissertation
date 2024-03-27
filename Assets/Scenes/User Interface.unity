@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.5283019, g: 0.51085794, b: 0.51085794, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
     m_SelectedColor: {r: 0.4313796, g: 0.2995283, b: 0.5, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.5283019, g: 0.51085794, b: 0.51085794, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
     m_SelectedColor: {r: 0.4313796, g: 0.2995283, b: 0.5, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -859,7 +859,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 704383206}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 985741839}
+        m_TargetAssemblyTypeName: ToggleCameraScript, Assembly-CSharp
+        m_MethodName: ToggleVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ToggleCameraScript.ToggleVisibility
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &704383206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,12 +1193,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985741837}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -232.37898, y: -516.3977, z: 0}
+  m_LocalScale: {x: 0.43033147, y: 0.43033144, z: 0.43033147}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1116349895}
+  m_Father: {fileID: 1127561293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &985741839
 MonoBehaviour:
@@ -1202,6 +1214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIMiniMap: {fileID: 856028063}
   LiveFloorPlan: {fileID: 491897099}
+  UserModel: {fileID: 0}
 --- !u!1 &1116349894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1245,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 491897100}
-  - {fileID: 985741838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &1127561289
@@ -1329,6 +1341,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 985741838}
   - {fileID: 856028064}
   - {fileID: 704383204}
   - {fileID: 1850701344}
@@ -1617,7 +1630,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.5283019, g: 0.51085794, b: 0.51085794, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
     m_SelectedColor: {r: 0.4313796, g: 0.2995283, b: 0.5, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}

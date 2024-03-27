@@ -12,6 +12,10 @@ public class ToggleCameraScript : MonoBehaviour
     [SerializeField]
     private GameObject LiveFloorPlan;
 
+    // User model that shows for some reason.
+    [SerializeField]
+    private GameObject UserModel;
+
     private bool isVisible = true;
 
     // Start is called before the first frame update
@@ -21,18 +25,23 @@ public class ToggleCameraScript : MonoBehaviour
 
     // Instead of Update use on enable and on disable. 
     // These run when the Toggle Camera Button is pressed. 
-    private void OnEnable()
-    {
-        ToggleVisibility();
-    }
-    private void OnDisable()
-    {
-        ToggleVisibility();
-    }
+    //private void OnEnable()
+    //{
+    //    ToggleVisibility();
+    //}
+    //private void OnDisable()
+    //{
+    //    ToggleVisibility();
+    //}
+
+    // Using on enbale and on disable didn't work well, try OnClick on the button itself.
+
+   
     public void ToggleVisibility()
     {
         isVisible = !isVisible;
         UIMiniMap.SetActive(isVisible);
         LiveFloorPlan.SetActive(isVisible);
+        UserModel.SetActive(isVisible);
     }
 }
