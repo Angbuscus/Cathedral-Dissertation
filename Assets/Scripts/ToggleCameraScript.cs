@@ -22,6 +22,7 @@ public class ToggleCameraScript : MonoBehaviour
     //colour the buttons
     private Button button;
     private bool isToggled = false;
+    [SerializeField]
     private Color originalColor;
     [SerializeField]
     private Color toggledColor;
@@ -72,7 +73,8 @@ public class ToggleCameraScript : MonoBehaviour
             ChangeButtonColor(originalColor);
         }
     }
-    // Colour applier
+    // Colour applier to component
+    // ColorBlock is the struct that handles the button colors.
     public void ChangeButtonColor(Color color)
     {
         ColorBlock colors = button.colors;
