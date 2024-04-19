@@ -14,12 +14,12 @@ using TMPro;
 /// The position is set based on the starting location that will be anchored with the QR code.
 /// The location is saved as 2 coordinatess, x and y, saved as a vector. 
 /// </summary>
+
 public class UserSessionTracker : MonoBehaviour
 {
-    // WHAT IS THIS?
+    // Define the varaibles, API Controller and TrackableSessionDTO, defined in their respective scripts.
     private APIController ApiController;
     private TrackableSessionDTO TrackableSession;
-    // END WHAT
 
     private readonly List<TrailPos> trail = new List<TrailPos>();// Readonly ensures that previous positions will not be overwritten.
 
@@ -37,12 +37,12 @@ public class UserSessionTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //// WHAT IS THIS DOING----------------
+        // Create an API class, create the Global ID for this session and instantiate Trackable objects.
         ApiController = new APIController();
 
         sessionID = DateTime.Now.ToString("dd/mm/yyyy") + ":" + Guid.NewGuid().ToString();
         TrackableSession = new TrackableSessionDTO(SessionID);
-        //END WHAT----------
+        
 
         userPos = user.GetComponent<Transform>();
         // Run Enumerators
@@ -52,7 +52,7 @@ public class UserSessionTracker : MonoBehaviour
 
     void onDestroy()
     {
-        // WHAT IS THIS DOING
+        // Create the end session details in the class taking the ID, Date and Time
         SessionEndTimeDTO sessionEnd = new SessionEndTimeDTO { SessionID = sessionID, SessionEndTime = DateTime.Now }; // Class and object created to hold the end of session data i.e. time. 
         // END WHAT
     }
@@ -61,9 +61,8 @@ public class UserSessionTracker : MonoBehaviour
     {
         while (true) // While the app is running
         {
-            //Code from old project.
+            // Set up new global unique ID for this tour:
             var id = Guid.NewGuid();
-            // END OF OLD CODE
             var currentPos = new TrailPos
             {
                 ID = id, 
@@ -109,7 +108,7 @@ public class UserSessionTracker : MonoBehaviour
 }
 
 //Getter and Setter for Trackable Position
-public class TrailPos
+public class TrailPos1
 {
     public Guid ID { get; set; }
     public DateTime DateTime { get; set; }
@@ -117,3 +116,5 @@ public class TrailPos
     public float YCoord { get; set; }
     public float ZCoord { get; set; }
 }
+
+

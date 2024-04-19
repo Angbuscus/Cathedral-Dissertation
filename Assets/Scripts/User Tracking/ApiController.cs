@@ -6,7 +6,7 @@ using System.IO;
 
 public class APIController
 {
-    private string apiURL = "http://example.com/api/"; // Replace with your API URL
+    private string APIURL = "https://angbuscus.github.io/CathedralARHost/"; // Replace with your API URL
 
     public void PostSession(TrackableSessionDTO session)
     {
@@ -14,7 +14,7 @@ public class APIController
         string json = JsonUtility.ToJson(session);
 
         // Create a web request to send the JSON string to the API
-        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(apiURL);
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(APIURL);
         request.Method = "POST";
         request.ContentType = "application/json";
         request.ContentLength = Encoding.UTF8.GetByteCount(json);
@@ -45,7 +45,7 @@ public class APIController
         string json = JsonUtility.ToJson(positions);
 
         // Create a web request to send the JSON string to the API
-        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(apiURL);
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(APIURL);
         request.Method = "POST";
         request.ContentType = "application/json";
         request.ContentLength = Encoding.UTF8.GetByteCount(json);
@@ -76,7 +76,7 @@ public class APIController
         string json = JsonUtility.ToJson(sessionEndTime);
 
         // Create a web request to send the JSON string to the API
-        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(apiURL);
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(APIURL);
         request.Method = "POST";
         request.ContentType = "application/json";
         request.ContentLength = Encoding.UTF8.GetByteCount(json);
@@ -109,7 +109,7 @@ public class APIController
         //Debug.Log(json);
 
         // Create a web request to send the JSON string to the API
-        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(apiURL + endPoint);
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(APIURL + endPoint);
         request.Method = "POST";
         request.ContentType = "application/json";
         request.ContentLength = Encoding.UTF8.GetByteCount(json);
